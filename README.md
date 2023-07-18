@@ -13,7 +13,12 @@ This is a vanilla repository template powered by:
 
 ### Setup
 
-When you're done cloning the repo, simply run `npm run setup`. The command should install all necessary dependencies, both for your front and backend. You can run your backend server with `npm run back` (after at least one TypeScript compilation run). You can run your frontend using `npm run front`. If you get a "Hello world!" display, congratulations, everything is set up correctly.
+-[] `yarn setup`
+-[] `yarn dev`
+
+to build for prod:
+-[] `cd ./frontend && yarn build`
+-[] `cd ../ && yarn build`
 
 If you edit environment variables, you'll need to restart both environments.
 
