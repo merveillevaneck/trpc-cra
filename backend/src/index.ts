@@ -4,11 +4,14 @@ import * as trpcExpress from '@trpc/server/adapters/express';
 import { appRouter } from './app-router';
 import * as dotenv from 'dotenv';
 
+const PORT = 3600
+
 dotenv.config({
-    path: '../.env',
+    path: '../../.env',
 });
 
 const createContext = ({}: trpcExpress.CreateExpressContextOptions) => ({});
+
 
 const app = express();
 app.use(cors());
@@ -18,6 +21,6 @@ app.use('/', trpcExpress.createExpressMiddleware({
     createContext,
 }));
 
-app.listen(+process.env.API_PORT, () => {
-    console.log(`Listening to port ${process.env.API_PORT}`);
+app.listen(PORT, () => {
+    console.log(`Listening to port ${PORT}`);
 });
